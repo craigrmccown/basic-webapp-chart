@@ -1,0 +1,8 @@
+letsencrypt:
+  server: https://acme-staging-v02.api.letsencrypt.org/directory
+  email: craigrmccown@gmail.com
+
+cert-manager:
+  ingressShim:
+    defaultIssuerName: letsencrypt
+    defaultIssuerKind: Issuer
