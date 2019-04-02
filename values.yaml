@@ -6,3 +6,6 @@ cert-manager:
   ingressShim:
     defaultIssuerName: letsencrypt
     defaultIssuerKind: Issuer
+
+postgresql:
+  enabled: false

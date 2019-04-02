@@ -23,7 +23,8 @@ To configure this chart, pass the `--set key=value` argument to `helm install` o
 | Parameter           | Description                                                           | Default                                                                                                                                 |
 | ------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
 | letsencrypt.server  | The url of the Let's Encrypt server to use                            | `https://acme-staging-v02.api.letsencrypt.org/directory` (Set this to `https://acme-v02.api.letsencrypt.org/directory` for production)  |
-| letsencrypt.email   | The email address that will receive Let's Encrypt notification emails | craigrmccown@gmail.com                                                                                                                  |
+| letsencrypt.email   | The email address that will receive Let's Encrypt notification emails | `craigrmccown@gmail.com`                                                                                                                |
+| postgresql.enabled  | Whether or not to install a PostgreSQL instance                       | `false`                                                                                                                                 |
 
 ## Dependencies
 
@@ -31,6 +32,7 @@ This chart creates few resources of its own, as the main purpose of this chart i
 
 - [cert-manager](https://github.com/helm/charts/tree/master/stable/cert-manager): Automatically issues and renews TLS certificates
 - [nginx-ingress](https://github.com/helm/charts/tree/master/stable/nginx-ingress): Bootstraps the Nginx Ingress controller, which is used to proxy ingress traffic to services within the cluster
+- [postgresql](https://github.com/helm/charts/tree/master/stable/postgresql): Conditionally installs a PostgreSQL instance
 
 > **Note**: To configure these charts, simply prepend the name of the chart when using the `--set` argument. For example, to set the `defaultBackend.enabled` value for the Nginx Ingress controller, use the key `nginx-ingress.defaultBackend.enabled`.
 

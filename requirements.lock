@@ -5,5 +5,8 @@ dependencies:
 - name: cert-manager
   repository: https://kubernetes-charts.storage.googleapis.com/
   version: v0.5.2
-digest: sha256:13f423066d834a4571882db029a1be28e7ea1e48d0e4227ef1f2c2f0b9d5c950
-generated: 2019-03-22T16:16:16.541368-04:00
+- name: postgresql
+  repository: https://kubernetes-charts.storage.googleapis.com/
+  version: 3.16.0
+digest: sha256:ed8321f30728521e8b0940221ef3e119013441c63428bbd0da1b7e7efdd7c1dd
+generated: 2019-04-02T16:56:18.500524-04:00

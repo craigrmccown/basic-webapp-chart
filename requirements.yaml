@@ -5,3 +5,7 @@ dependencies:
 - name: cert-manager
   version: 0.5.2
   repository: "https://kubernetes-charts.storage.googleapis.com/"
+- name: postgresql
+  version: 3.16.0
+  repository: "https://kubernetes-charts.storage.googleapis.com/"
+  condition: postgresql.enabled
